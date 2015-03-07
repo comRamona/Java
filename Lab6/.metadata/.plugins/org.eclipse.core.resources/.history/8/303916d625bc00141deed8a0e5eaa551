@@ -1,9 +1,0 @@
-
-public class Ref { public static void change(String p) { p="wee"; }
-public static void main(String[] args) {
-	String s="hello";
-	change(s);
-	System.out.println(s);
-}
-
-}

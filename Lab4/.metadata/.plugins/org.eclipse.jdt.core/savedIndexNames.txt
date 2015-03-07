@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/home/ramona/Documents/JavaProjects/Lab4/.metadata/.plugins/org.eclipse.jdt.core
+3615140116.index
+547856569.index
+3160474439.index

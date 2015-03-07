@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+/home/rama/workspace/JavaProjects/Lab6/.metadata/.plugins/org.eclipse.jdt.core
+3260956918.index
+3248969445.index
+2248321864.index
+175554853.index
+2857050212.index
+3422683769.index
+2084139946.index

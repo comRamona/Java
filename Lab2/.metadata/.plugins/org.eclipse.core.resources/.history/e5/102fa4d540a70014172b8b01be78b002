@@ -1,0 +1,19 @@
+
+public class ArrayRotate {
+	public static void main(String[] args) {
+		int n=StdIn.readInt();
+		int[] nums;
+		nums=new int[n];
+		for(int i=0;i<n;i++)
+			nums[i]=StdIn.readInt();
+		int[] copy=new int[n];
+		for(int i=0;i<n;i++)
+			copy[i]=nums[n/(i+1)];
+		for(int i=0;i<n;i++)
+			StdOut.print(copy[i]+" ");
+		StdOut.println();
+		StdOut.close();
+		
+	}
+
+}

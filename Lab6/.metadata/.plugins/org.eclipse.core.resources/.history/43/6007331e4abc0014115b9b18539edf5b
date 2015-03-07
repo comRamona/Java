@@ -1,0 +1,11 @@
+import java.util.Calendar;
+
+
+public class CreditCard {
+	public static void main(String[] args) {
+		Calendar now=Calendar.getInstance();
+		int y=now.get(Calendar.YEAR);
+		System.out.println(y);
+	}
+
+}

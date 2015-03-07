@@ -1,0 +1,21 @@
+
+public class Mode {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []count=new int[10];
+		int [] dataset=new int[args.length];
+		for(int i=0;i<args.length;i++)
+			count[dataset[i]]++;
+	   for(int i=0;i<args.length;i++)
+	   { System.out.print("["+i+"s: "+count[i]+"] ");
+	    for(int j=1;j<=count[i];j++) System.out.print(".");
+	    System.out.println();
+	   }
+
+	}
+
+}

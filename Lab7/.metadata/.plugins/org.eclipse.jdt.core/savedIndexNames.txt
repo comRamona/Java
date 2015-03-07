@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/home/rama/Desktop/JavaLabs/Lab7/.metadata/.plugins/org.eclipse.jdt.core
+2251541095.index
+1362276081.index
+2374626323.index
+2167183244.index
+1054018344.index
+2453082758.index

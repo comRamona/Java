@@ -1,0 +1,16 @@
+import javax.swing.*;
+import java.io.*;
+public class Play {
+ public static void main(String[] args) {
+int n=(int) Math.random()*(100-1)+1;
+int p=0;
+String getN=JOptionPane.showInputDialog("Lucky number","Enter a number between 1 and 100");
+try{p=Integer.parseInt(getN); } catch(IOException e) {} 
+while(p!=n) {if(n>p) { String w="big"; JOptionPane.showMessageDialog(null, "Your number is too"+w,null,JOptionPane.WARNING_MESSAGE);}
+else JOptionPane.showMessageDialog(null, "wrong", "Your number is too small",JOptionPane.WARNING_MESSAGE, null);
+getN=JOptionPane.showInputDialog("Lucky number","Enter a number between 1 and 100");
+try{p=Integer.parseInt(getN); } catch(IOException e) {} 
+}
+JOptionPane.showMessageDialog(null,"You win");
+}
+}

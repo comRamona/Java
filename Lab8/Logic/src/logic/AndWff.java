@@ -12,6 +12,8 @@ public AndWff(Wff left, Wff right)
 	
 	public boolean eval(Valuation val){
 		return (getLeft().eval(val)&&getRight().eval(val));
+		
+		//so, if getLeft() returns a PropVal, use eval from PropVal and get value, otherwise use this one
 	}
 
 }

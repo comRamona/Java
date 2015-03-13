@@ -5,3 +5,16 @@ public abstract class Wff {
 	public abstract String toString();
 
 }
+
+/*
+
+   			WFF
+   	
+ |						|
+PropVar				BinaryWff
+                     |     |
+                   AndWff  OrWff
+                   
+                   
+                   
+*/

@@ -1,10 +1,17 @@
+import java.util.Arrays;
+
 public class InvestigateLens {
-	public static boolean checkPutGet(String[] source) {
+	/*public static boolean checkPutGet(String[] source) {
 		boolean w = true;
-		String[] s = Lens.put(source, Lens.get(source));
+		String[] s = Lens.put(source, Lens.get(source));       //use Arrays.equals instead
 		for (int i = 0; i < source.length; i++)
 			w = w && source[i].equals(s[i]);
 		return w;
+
+	}*/
+	public static boolean checkPutGet(String[] source) {
+		String[] s = Lens.put(source, Lens.get(source));
+		return Arrays.equals(source, s);                 //check if two arrays are equal
 
 	}
 

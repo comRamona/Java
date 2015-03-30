@@ -1,0 +1,55 @@
+public class BinaryExpr extends Expr {
+	private Expr l, r;
+	private Op op;
+
+	public BinaryExpr(Expr l, Op op, Expr r) {
+		this.l = l;
+		this.r = r;
+		this.op = op;
+	}
+
+	public Expr getLeft() {
+		return l;
+	}
+
+	public Expr getRight() {
+		return r;
+	}
+
+	public Op getOP() {
+		return op;
+	}
+
+	public boolean isTerm() {
+		return l.isTerm() && r.isTerm() && op == Op.PRODUCT;
+	}
+
+	public boolean isNorm() {
+		boolean c1;
+		boolean c2;
+		c1 = this.isTerm();
+		c2 = l.isNorm() && r.isNorm() && op == Op.SUM;
+		return c1 || c2;
+
+	}
+
+	public String toString() {
+		return "(" + l.toString() + op + r.toString() + ")";
+	}
+
+	public BinaryExpr normalize() {
+		if (this.isNorm())
+			return this;
+		else {  //if it's not norm, one of left or right is a binary expression
+			if (getLeft().getLeft() != null)
+				return (new BinaryExpr((new BinaryExpr(l.getLeft(), Op.PRODUCT,
+						r).normalize()), Op.SUM, new BinaryExpr(l.getRight(),
+						Op.PRODUCT, r).normalize()));
+			else
+				return (new BinaryExpr(new BinaryExpr(l, Op.PRODUCT,
+						r.getLeft()), Op.SUM, new BinaryExpr(l, Op.PRODUCT,
+						r.getRight()))).normalize();
+		}
+	}
+
+}

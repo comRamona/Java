@@ -49,7 +49,6 @@ public class CircuitTester {
 	}
 
 	public void TestNeg() {
-		// ADD CODE HERE
 		System.out.println("\nTesting NotGate");
 		Input in1 = new Input();
 		Circuit not = new SingleInputCircuit(in1, new NotGate());

@@ -83,7 +83,8 @@ public class CircuitTester {
 		}
 
 	}
-
+/*
+----this is the stupid version
 	public void TestXor() {
 		// ADD CODE HERE
 		System.out.println("\nTesting Xor");
@@ -116,7 +117,28 @@ public class CircuitTester {
 						: "Failure"));
 			}
 		}
-	}
+	} */
+	public void testXor() {
+	System.out.println("\nTesting Xor");
+	System.out.println("Output should be true iff the two inputs are different");
+	Input in1 = new Input();
+	Input in2 = new Input();
+	Circuit or = new DoubleInputCircuit(in1, in2, new OrGate());
+	Circuit and = new DoubleInputCircuit(in1, in2, new AndGate());
+	Circuit nand = new SingleInputCircuit(and, new NotGate());
+	Circuit xor = new DoubleInputCircuit(or, nand, new AndGate());
+	for (int i = 0; i < 2; i++) {
+	in1.setValue(i == 1);
+	for (int j = 0; j < 2; j++) {
+	in2.setValue(j == 1);
+	System.out.printf("Input: %s, %s\t", in1.output(), in2.output());
+	boolean o = xor.output();
+	System.out.printf("Output: %s\t", o);
+	boolean success = (o == ((in1.output() || in2.output()) && !(in1.output() && in2.output())));
+	System.out.printf("Result: %s\n", (success ? "Success": "Failure"));
+}
+}
+}
 
 	public static void main(String[] args) {
 

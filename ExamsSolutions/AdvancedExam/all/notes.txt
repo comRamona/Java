@@ -1,0 +1,70 @@
+Q2: you have a fair bit of the code you want, but this doesn't pass
+any non-trivial test, because almost anything you do raises an array
+out of bounds exception - e.g., adding an element assigns to
+elements[1] when there's only space allocated for elements[0]. Have a
+look at the web page for a solution and notes. Can't quite give a beta
+for this I'm afraid.
+
+Q3:
+
+elem, elem2, good. See web page re style (missing {}).
+
+Your elem3 makes an interesting error which it's worth understanding. 
+Exercise for you: in the same directory, put a new class Example
+with this code:
+
+public class Example {
+	private String s;
+	public Example(String s) {
+		this.s = s;
+	}
+	public String toString() {
+		return s;
+	}
+}
+
+and now in your Question3's main method, add this:
+
+Example[] us = new Example[3];
+us[0] = new Example("hello");
+us[1] = new Example("world");
+us[2] = new Example("again");
+System.out.println(elem3(us[1], us));
+
+What do you think will happen? When you think you know, try it, and
+dig till you understand - let me know if you have trouble!
+
+But also, sorting an array just to find out whether a particular
+element is in it is not likely to be fast - sorting's an expensive
+operation. See the web page for alternatives. In fact, your elem2 is
+the most efficient way to do it, and you're missing a shorter way.
+
+Q3 mark: alpha
+
+
+Q4: not bad! See the web page for a far easier way to do this using a
+Pattern and Matcher. The two main problems your code has are:
+
+- you can get out of bounds exceptions, because your code sometimes
+indexes into a string at places it may not have, e.g. you do
+q.substring(0, 8) without checking whether the string has enough
+characters;
+
+- you have an unconventional notion of word break, e.g., your code
+doesn't identify the comma in s1234567,s1234567 as a word break. But
+then, the question didn't define word break.
+
+Q4 mark: beta
+
+
+Q5: As with Q2, you have quite a few of the lines you need, but the
+code doesn't work; it throws an InputMismatchException on the sample
+file. Maybe you ran out of time? Not quite enough for a beta here.
+
+Overall: PASS. Well done. You may have found this quite challenging,
+but I hope you enjoyed it. Feel free to name me as a referee any time
+in the next couple of years if it would be useful to do so; it is not
+necessary to ask each time, though you might like to mail me with an
+up to date CV and some info about the job and why you want it, if you
+think I'm likely to be called on and you'd like me to be in the best
+possible position to write.

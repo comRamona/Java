@@ -1,4 +1,4 @@
-//this programs reverse every word in a gien string and leaves non-alphabetic characters in place
+//this programs reverses every word in a gien string and leaves non-alphabetic characters in place
 
 public class ReverseWords{
 public static String reverse(String str){     

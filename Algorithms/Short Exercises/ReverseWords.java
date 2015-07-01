@@ -15,6 +15,16 @@ public static String reverse(String str){
         System.out.println(result);
         return result;   
     }
+   //this function reverses an entire String
+  public static String reverse2(String str){     
+    String temp = "";
+    for(int i=0;i<str.length();i++)
+            temp = str.charAt(i) + temp;        
+  
+    System.out.println(temp);
+    return temp;
+     
+}
 public static void main(String[] args){
 	String s1=reverse("Hello World, hello nation!");
 	String s2="olleH dlroW, olleh noitan!";  //expected output

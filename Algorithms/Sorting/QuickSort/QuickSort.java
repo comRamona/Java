@@ -31,7 +31,7 @@ public class QuickSort {
 			}
 				
 		}
-		if(left<j) qsort(arr,left,j);
+		if(left<j) qsort(arr,left,j);  //array to sort has size bigger than 1
 		if(right>i) qsort(arr,i,right);
 		
 		

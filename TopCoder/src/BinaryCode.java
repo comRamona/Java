@@ -1,4 +1,4 @@
-//SMR 144 Div1 250
+//SMR 144 Div1 300
 public class BinaryCode {
 	public static String[] decode(String message) {
 		String[] st = new String[2];

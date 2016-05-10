@@ -35,8 +35,7 @@ public class Solution {
 			LinkedList<Integer> queue = new LinkedList<Integer>();
 			queue.add(start);
 			while (!queue.isEmpty()) {
-				int top = queue.getFirst();
-				queue.removeFirst();
+				int top = queue.removeFirst();
 				for (Integer k : adj[top]) {
 					if (visited[k] == 0) {
 						visited[k] = 1;

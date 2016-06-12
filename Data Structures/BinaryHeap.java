@@ -68,7 +68,7 @@ public class BinaryHeap {
             s=left;
         }
         if(right<size ) {
-            if(ar.get(right)>ar.get(i))
+            if(ar.get(right)>ar.get(s))
             s = right;
 
         }

@@ -1,0 +1,52 @@
+package strategy;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import java.util.Date;
+import java.util.Random;
+
+/**
+ * Created by rama on 04/05/17.
+ */
+public class Threads{
+
+    public static void main(String[] args) throws InterruptedException {
+        Thread p1 = new Thread(new Pro());
+        Thread p2 = new Thread(new Pro2());
+        p1.start();
+        System.out.println("Pig");
+        p2.start();
+        while(true){
+            System.out.println("Chocolate");
+        }
+
+
+
+    }
+
+
+}
+class Pro implements Runnable {
+    @Override
+    public void run() {
+
+        while (true) {
+
+            System.out.println(new Date().toString());
+        }
+    }
+}
+
+class Pro2 implements Runnable {
+    @Override
+    public void run() {
+
+        while (true) {
+
+            System.out.println("uu" + new Date().toString());
+        }
+    }
+
+}
